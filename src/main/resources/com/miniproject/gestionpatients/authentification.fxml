@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="602.0" style="-fx-background-color: #C4CFD8;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="360.0" layoutY="165.0" text="Login">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font></Label>
+      <PasswordField fx:id="tfPassword" layoutX="434.0" layoutY="203.0" prefHeight="25.0" prefWidth="117.0" style="-fx-background-radius: 30%;" />
+      <VBox layoutY="-4.0" prefHeight="409.0" prefWidth="316.0" style="-fx-background-color: #C4CFD8;">
+         <children>
+            <ImageView fitHeight="316.0" fitWidth="335.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Assets/file.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <TextField fx:id="tfLogin" layoutX="434.0" layoutY="164.0" prefHeight="25.0" prefWidth="117.0" style="-fx-background-radius: 20%;" />
+      <Label layoutX="318.0" layoutY="204.0" prefWidth="168.0" text="Password">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="141.0" fitWidth="160.0" layoutX="374.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/login.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogin" layoutX="489.0" layoutY="268.0" mnemonicParsing="false" style="-fx-background-color: trasparent;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Assets/loginn.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="419.0" layoutY="268.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Assets/affecter.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

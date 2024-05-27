@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C4CFD8;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane layoutX="207.0" layoutY="171.0" prefHeight="143.0" prefWidth="354.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="108.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="312.0" minWidth="10.0" prefWidth="312.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="129.0" text="CIN" />
+            <Label prefHeight="18.0" prefWidth="72.0" text="Nom" GridPane.rowIndex="1" />
+            <Label prefHeight="18.0" prefWidth="58.0" text="Prenom" GridPane.rowIndex="2" />
+            <Label prefHeight="18.0" prefWidth="52.0" text="login" GridPane.rowIndex="3" />
+            <Label prefHeight="18.0" prefWidth="77.0" text="foction" GridPane.rowIndex="4" />
+            <TextField fx:id="cinField" GridPane.columnIndex="1" />
+            <TextField fx:id="nomField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="prenomField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="loginField" prefHeight="24.0" prefWidth="312.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="fonctionField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="password" GridPane.rowIndex="5" />
+            <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="384.0" layoutY="314.0" prefHeight="40.0" prefWidth="182.0">
+         <buttons>
+            <Button fx:id="btnOk" mnemonicParsing="false" style="-fx-background-color: transp;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Assets/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnCancel" mnemonicParsing="false" style="-fx-background-color: trasp;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Assets/affecter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </buttons>
+      </ButtonBar>
+      <HBox alignment="CENTER" layoutX="81.0" layoutY="341.0" prefHeight="34.0" prefWidth="219.0">
+         <children>
+            <Button fx:id="btnDeleteP" mnemonicParsing="false" style="-fx-background-color: transpo;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Assets/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnajouter" mnemonicParsing="false" style="-fx-background-color: transparant;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Assets/plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnEdit" mnemonicParsing="false" style="-fx-background-color: transporant;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Assets/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </HBox>
+      <TableView fx:id="personnelTable" layoutX="14.0" layoutY="116.0" prefHeight="225.0" prefWidth="176.0" style="-fx-background-color: trasp;">
+         <columns>
+            <TableColumn fx:id="cinColumn" prefWidth="87.20000648498535" style="-fx-background-color: #C4CFD8;" text="CIN" />
+            <TableColumn fx:id="nomColumn" prefWidth="83.19998168945312" style="-fx-background-color: #C4CFD8;" text="Nom" />
+         </columns>
+      </TableView>
+      <HBox layoutX="14.0" layoutY="77.0" prefHeight="34.0" prefWidth="333.0">
+         <children>
+            <Label prefHeight="36.0" prefWidth="125.0" text="Filter par nom  :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font></Label>
+            <TextField fx:id="rechercheField" prefHeight="39.0" prefWidth="149.0" />
+            <Button fx:id="btnRechercher" mnemonicParsing="false" style="-fx-background-color: trnsp;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Assets/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </HBox>
+      <ImageView fitHeight="119.0" fitWidth="125.0" layoutX="356.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/doctor.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="30.0" layoutY="14.0" prefHeight="50.0" prefWidth="346.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="148.0" text="Bienvenue">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAdmin" prefHeight="40.0" prefWidth="84.0" />
+            <Button fx:id="btnmove" mnemonicParsing="false" prefHeight="32.0" prefWidth="60.0" style="-fx-background-color: tranparant;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Assets/move-right.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="640.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+      <HBox prefHeight="38.0" prefWidth="554.0" style="-fx-background-color: black;">
+         <children>
+            <Label prefHeight="17.0" prefWidth="144.0" text="    bienvenue  " textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAdmin" prefHeight="17.0" prefWidth="185.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnlogoutp" mnemonicParsing="false" prefHeight="35.0" prefWidth="52.0" style="-fx-background-color: transparont;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Assets/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+        <TabPane fx:id="tpMenu" prefHeight="426.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab style="-fx-background-color: #C4CFD8;" text="CRUD Patient">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #C4CFD8;">
+                            <children>
+                                <HBox layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="307.0">
+                                    <children>
+                                        <Label text="Filter par nom  :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                                        <TextField fx:id="recherchePatientField" prefHeight="37.0" prefWidth="149.0" />
+                                        <Button fx:id="btnFilterPat" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                                    </children>
+                                </HBox>
+                                <TableView fx:id="patientTable" layoutX="10.0" layoutY="94.0" prefHeight="258.0" prefWidth="200.0" style="-fx-background-color: transparont;">
+                                    <columns>
+                                        <TableColumn fx:id="nomColumn" prefWidth="100.0" style="-fx-background-color: #C4CFD8;" text="nom" />
+                                        <TableColumn fx:id="prenomColumn" prefWidth="99.0" style="-fx-background-color: #C4CFD8;" text="prenom" />
+                                    </columns>
+                                </TableView>
+                                <HBox alignment="CENTER" layoutX="11.0" layoutY="355.0" prefHeight="34.0" prefWidth="541.0">
+                                    <children>
+                                        <Button fx:id="btnDelete" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/delete.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                                        <Button fx:id="btnajouter" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                                        <Button fx:id="btnEdit" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                                    </children>
+                                </HBox>
+                        <GridPane layoutX="241.0" layoutY="145.0" prefHeight="119.0" prefWidth="279.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="60.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="312.0" minWidth="10.0" prefWidth="219.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="55.0" text="CIN" />
+                              <Label prefHeight="18.0" prefWidth="72.0" text="Nom" GridPane.rowIndex="1" />
+                              <Label prefHeight="18.0" prefWidth="65.0" text="Prenom" GridPane.rowIndex="2" />
+                              <Label prefHeight="18.0" prefWidth="51.0" text="sexe" GridPane.rowIndex="3" />
+                              <Label prefHeight="18.0" prefWidth="77.0" text="telephone" GridPane.rowIndex="4" />
+                              <TextField fx:id="cinField" GridPane.columnIndex="1" />
+                              <TextField fx:id="nomField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="prenomField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="sexeField" prefHeight="25.0" prefWidth="221.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="telField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <ButtonBar layoutX="324.0" layoutY="279.0" prefHeight="40.0" prefWidth="182.0">
+                           <buttons>
+                              <Button fx:id="btnOk" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/check.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="btnCancel" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/multiply.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </buttons>
+                        </ButtonBar>
+                        <ImageView fitHeight="126.0" fitWidth="142.0" layoutX="331.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Assets/examination.png" />
+                           </image>
+                        </ImageView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab style="-fx-background-color: #C4CFD8;" text="CRUD Medicament">
+                    <content>   
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #C4CFD8;">
+                     <children>
+                        <HBox layoutX="14.0" layoutY="20.0" prefHeight="41.0" prefWidth="551.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="116.0" text="Filter par libelle">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <TextField fx:id="filtermedField" prefHeight="38.0" prefWidth="210.0" />
+                              <Button fx:id="btnfiltermed" mnemonicParsing="false" prefHeight="27.0" prefWidth="52.0" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="medicamentTable" layoutX="30.0" layoutY="86.0" prefHeight="284.0" prefWidth="200.0" style="-fx-background-color: transparont;">
+                          <columns>
+                            <TableColumn fx:id="libelleColumn" prefWidth="88.0" style="-fx-background-color: #C4CFD8;" text="Libelle" />
+                            <TableColumn fx:id="prixColumn" prefWidth="111.0" style="-fx-background-color: #C4CFD8;" text="Prix" />
+                          </columns>
+                        </TableView>
+                        <HBox alignment="CENTER" layoutX="45.0" layoutY="341.0" prefHeight="34.0" prefWidth="541.0">
+                           <children>
+                              <Button fx:id="btnDeleteM" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/delete.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Button fx:id="btnajouterM" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Button fx:id="btnEditM" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children>
+                        </HBox>
+                        <GridPane layoutX="251.0" layoutY="168.0" prefHeight="106.0" prefWidth="279.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="60.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="312.0" minWidth="10.0" prefWidth="219.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="55.0" text="Reference" />
+                              <Label prefHeight="18.0" prefWidth="72.0" text="Libelle" GridPane.rowIndex="1" />
+                              <Label prefHeight="18.0" prefWidth="65.0" text="Prix" GridPane.rowIndex="2" />
+                              <TextField fx:id="refField" GridPane.columnIndex="1" />
+                              <TextField fx:id="libelleField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="prixField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <ButtonBar layoutX="334.0" layoutY="289.0" prefHeight="40.0" prefWidth="182.0">
+                           <buttons>
+                              <Button fx:id="btnOkM" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/check.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Button fx:id="btnCancelM" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/multiply.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </buttons>
+                        </ButtonBar>
+                        <ImageView fitHeight="109.0" fitWidth="126.0" layoutX="353.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Assets/first-aid-kit.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab style="-fx-background-color: #C4CFD8;" text="Affecter medicament a un patient">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="428.0" prefWidth="600.0" style="-fx-background-color: #C4CFD8;">
+                     <children>
+                        <HBox layoutX="27.0" layoutY="23.0" prefHeight="41.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="52.0" text="Nom">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <TextField fx:id="cherPnomField" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #C7FAFF;" />
+                              <Button fx:id="btnFnom" mnemonicParsing="false" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="patImedTable" layoutX="27.0" layoutY="63.0" prefHeight="128.0" prefWidth="200.0" style="-fx-background-color: transparont;">
+                           <columns>
+                              <TableColumn fx:id="patnomColumn" prefWidth="88.0" style="-fx-background-color: #C4CFD8;" text="Nom" />
+                              <TableColumn fx:id="patprenomColumn" prefWidth="111.0" style="-fx-background-color: #C4CFD8;" text="Prenom" />
+                           </columns>
+                        </TableView>
+                        <HBox layoutX="319.0" layoutY="23.0" prefHeight="41.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="62.0" text="Libeele">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <TextField fx:id="cherMlibField" prefHeight="38.0" prefWidth="93.0" />
+                              <Button fx:id="btnFlibelle" mnemonicParsing="false" prefHeight="27.0" prefWidth="58.0" style="-fx-background-color: transparont;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Assets/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="medIpatTable" layoutX="319.0" layoutY="65.0" prefHeight="125.0" prefWidth="200.0" style="-fx-background-color: transparont;">
+                           <columns>
+                              <TableColumn fx:id="medlibColumn" prefWidth="88.0" style="-fx-background-color: #C4CFD8;" text="Libelle" />
+                              <TableColumn fx:id="medpriColumn" prefWidth="111.0" style="-fx-background-color: #C4CFD8;" text="Prix" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnaffecter" layoutX="242.0" layoutY="164.0" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Assets/aff.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <TableView fx:id="affecterTable" layoutX="27.0" layoutY="238.0" prefHeight="128.0" prefWidth="343.0" style="-fx-background-color: transparont;">
+                           <columns>
+                              <TableColumn fx:id="affPCinColumn" prefWidth="102.0" style="-fx-background-color: #C4CFD8;" text="Patient" />
+                              <TableColumn fx:id="affMrefColumn" minWidth="0.0" prefWidth="105.0" style="-fx-background-color: #C4CFD8;" text="Medicament" />
+                              <TableColumn fx:id="affPrCinColumn" prefWidth="133.0" style="-fx-background-color: #C4CFD8;" text="Personnel" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnSupprimer" layoutX="370.0" layoutY="328.0" mnemonicParsing="false" style="-fx-background-color: transparont;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Assets/delete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btnpdfpat" layoutX="14.0" layoutY="190.0" mnemonicParsing="false" style="-fx-background-color: transparant;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Assets/download.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnpdfmed" layoutX="480.0" layoutY="190.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Assets/download.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+
+
+</VBox>
